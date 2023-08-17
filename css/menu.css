@@ -250,15 +250,19 @@ header nav {
   font-size: 2rem;
 }
 .menu-section h3 {
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: start;
   width: 130%;
 }
 
 .menu-item h4 {
-  display: inline;
+  display: inline-block;
   width: 70%;
   font-size: 3rem;
+}
+.menu-item h4:nth-child(2n) {
+  width: 20%;
+  text-align: right;
 }
 
 /* footer section */
@@ -303,7 +307,10 @@ form input {
 /* mobile media query */
 @media (max-width: 428px) {
   /* header section */
-
+  .menu-item p {
+    color: black;
+    font-size: 3rem;
+  }
   header h1 {
     text-align: center;
   }
@@ -337,9 +344,15 @@ form input {
     color: black;
     text-align: center;
   }
+  .menu h2 {
+    background-color: white;
+    color: black;
+    border-bottom: solid 6vw black;
+  }
   .menu-section h3 {
     text-align: center;
     width: 100%;
+    border: solid 1vh black;
   }
   .menu-item h2 {
     border-bottom: 20px solid black;
@@ -347,14 +360,14 @@ form input {
     text-align: center;
   }
   .menu-item h4 {
-    display: block;
+    display: inline-block;
     width: 100%;
     text-align: center;
   }
   .menu-item h3 {
     border: 5px solid black;
   }
-  .menu-item h4:nth-child(3) {
+  .menu-item h4:nth-child(2n) {
     width: 100%;
     text-align: center;
   }
@@ -376,7 +389,7 @@ form input {
     padding-top: 2.5vh;
     font-size: 2rem;
   }
-  s footer div {
+  footer div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
